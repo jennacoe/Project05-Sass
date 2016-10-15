@@ -1,0 +1,23 @@
+
+footer {
+  background-color: $lightergray;
+  padding: 40px 15px;
+
+  p {
+  	@include text(16px, 100, $gray, 1.4);
+  }
+
+  p:first-of-type {
+    padding-bottom: 20px;
+    @include breakpoint(narrow) {
+      width: 58%;
+      margin: 16px auto;
+    }
+  }
+
+}
+
+.contact a {
+  @include text($color: $gray, $weight: bold);
+  padding-left: 10px;
+}

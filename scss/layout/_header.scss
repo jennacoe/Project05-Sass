@@ -1,0 +1,32 @@
+header {
+  @extend %centered;
+  padding: 35px 10px;
+  @include breakpoint(narrow) {
+  	padding: 35px 30px 65px;
+  }
+
+  img {
+    max-width: 200px;
+    @include breakpoint(narrow) {
+      float: right;
+      max-width: 290px;
+      margin-left: 15px;
+    }
+    @include breakpoint(wide) {
+      max-width: 340px;
+      margin-bottom: 60px;
+    }
+  }
+
+  p {
+  	@include text(16px, 100, $gray, 1.4);
+  	@include breakpoint(narrow) {
+  	  font-size: $font-base + 3px;
+      text-align: left;
+      margin-top: 0;
+  	}
+  	@include breakpoint(wide) {
+  	  width: 53%;
+  	}
+  }
+}

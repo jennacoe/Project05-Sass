@@ -1,0 +1,57 @@
+* { 
+  box-sizing: border-box;
+}
+
+body {
+  @extend %centered;
+  margin: 0;
+  font-family: $Roboto;
+  color: $darkgray;
+  background-color: $lightblue;
+  @include breakpoint(wide) {
+    max-width: 985px;
+    margin: 0 auto;
+  }
+}
+  
+h3 {
+  font-weight: normal;
+}
+
+h4 {
+  @extend %centered;
+  font-size: $font-base - 2px;
+  padding: 0 0 20px;
+}
+
+a {
+  color: $darkgray;
+  text-decoration: $no;
+
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.notMobile {
+  display: $no;
+  @include breakpoint(narrow) {
+    display: initial;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.mobile {
+  @include breakpoint(narrow) {
+    display: $no;
+  }
+}
+
+
+
+
+

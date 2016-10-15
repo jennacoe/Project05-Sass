@@ -1,0 +1,34 @@
+main {
+  padding: 30px 0 40px;
+  background-color: $white;
+}
+
+.skills {
+  max-width: 320px;
+  padding: 10px 15px;
+  margin: auto;
+  @include breakpoint(narrow) {
+    max-width: 360px;
+    padding: 10px 5px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 35px;
+  }
+  @include breakpoint(wide) {
+    max-width: 310px;
+    padding: 10px;
+  }
+
+  img { 
+    max-width: 100%;
+  }
+
+  p {
+    @include text(15px, 100, $darkgray, 1.4);
+    margin: 16px;
+  }
+  @include breakpoint(narrow) {
+    width: 90%;
+    margin: 16px auto;
+  }
+}

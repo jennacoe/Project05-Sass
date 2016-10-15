@@ -1,0 +1,17 @@
+//Text
+@mixin text($size: null, $weight: null, $color: null, $l-height: null) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+	line-height: $l-height;
+}
+
+//Media Query
+@mixin breakpoint($brk) {
+  @if $brk == narrow {
+    @media (min-width: 481px) { @content; }
+  }
+  @else if $brk == wide {
+    @media (min-width: 769px) { @content; }
+  }
+}
